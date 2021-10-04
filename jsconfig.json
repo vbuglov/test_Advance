@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/atoms/*": ["src/components/1_atoms/*"],
+      "@/molecules/*": ["src/components/2_molecules/*"],
+      "@/templates/*": ["src/components/4_templates/*"],
+      "@/organisms/*": ["src/components/3_organisms/*"],
+      "@/pages/*": ["src/components/5_pages/*"],
+      "@/hooks/*": ["src/components/0_functionals/hooks/*"],
+      "@/schemas/*": ["src/schemas/*"],
+      "@/stores/*": ["src/stores/*"],
+      "@/components/*": ["src/components/*"],
+      "@/containers/*": ["src/containers/*"],
+      "@/config/*": ["config/*"],
+      "@/utils/*": ["src/utils/"],
+      "@/vars/*": ["src/utils/vars/"],
+      "@/i18n": ["i18n.js"]
+    }
+  },
+  "module": "es2015",
+  "exclude": ["node_modules"]
+}
