@@ -1,17 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { MainPageWrapper } from "@/templates/index";
+import { PhonePage } from "@/pages/index";
 
 export const getServerSideProps = async (props) => {
   return {
     props: {
-      a: null,
+      auth: null,
     },
   };
 };
 
 const Index = (props) => {
-  return <MainPageWrapper>1234</MainPageWrapper>;
+  return (
+    <MainPageWrapper>
+      <PhonePage />
+    </MainPageWrapper>
+  );
 };
 
 export default Index;

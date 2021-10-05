@@ -10,7 +10,7 @@
       "@/pages/*": ["src/components/5_pages/*"],
       "@/hooks/*": ["src/components/0_functionals/hooks/*"],
       "@/schemas/*": ["src/schemas/*"],
-      "@/stores/*": ["src/stores/*"],
+      "@/store/*": ["src/store/*"],
       "@/components/*": ["src/components/*"],
       "@/containers/*": ["src/containers/*"],
       "@/config/*": ["config/*"],
