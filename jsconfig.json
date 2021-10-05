@@ -8,6 +8,7 @@
       "@/templates/*": ["src/components/4_templates/*"],
       "@/organisms/*": ["src/components/3_organisms/*"],
       "@/pages/*": ["src/components/5_pages/*"],
+      "@/wrappers/*": ["src/components/6_wrappers/*"],
       "@/hooks/*": ["src/components/0_functionals/hooks/*"],
       "@/schemas/*": ["src/schemas/*"],
       "@/store/*": ["src/store/*"],

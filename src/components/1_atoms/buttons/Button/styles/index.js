@@ -8,7 +8,7 @@ export const Btn = styled.button`
   border-radius: 4px;
   &.primary {
     ${({ color }) => `background-color: ${color};`}
-    ${({ color }) => `border: 1px solid ${lighten(0.2, color)};`}
+    ${({ color }) => `border: 1px solid ${lighten(0.1, color)};`}
     color: white;
     &:active {
       ${({ color }) => `background-color: ${lighten(0.1, color)};`}
@@ -24,5 +24,3 @@ export const Btn = styled.button`
     }
   }
 `;
-
-//"primary", "reversed"

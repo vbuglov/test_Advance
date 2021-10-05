@@ -22,7 +22,7 @@ Button.propTypes = {
 Button.defaultProps = {
   children: "Сохранить",
   type: "primary",
-  color: "blue",
+  color: "#2873eb",
   size: "medium",
   onClick: console.log,
   className: "",

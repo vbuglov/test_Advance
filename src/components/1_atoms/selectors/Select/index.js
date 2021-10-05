@@ -1,8 +1,12 @@
 import React from "react";
-import { Wrapper, Option } from "./styles";
+import { Wrapper, Option, Slc } from "./styles";
 
-const Select = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+const Select = ({ children, className, ...restProps }) => {
+  return (
+    <Wrapper className={className}>
+      <Slc {...restProps}>{children}</Slc>
+    </Wrapper>
+  );
 };
 
 Select.Option = Option;

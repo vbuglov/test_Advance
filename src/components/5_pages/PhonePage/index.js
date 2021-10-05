@@ -2,9 +2,23 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment } from "@/store/slicers/counterSlicer";
 import { Wrapper } from "./styles";
-import { Button, Select } from "@/atoms/index";
+import { ContactForm } from "@/organisms/index";
+import { initState } from "./HOC";
 
-const { Option } = Select;
+const list = [
+  {
+    type: "email",
+    value: "test@test.com",
+  },
+  {
+    type: "email",
+    value: "test@test.com",
+  },
+  {
+    type: "email",
+    value: "test@test.com",
+  },
+];
 
 const PhonePage = () => {
   const count = useSelector((state) => state.counter.value);
@@ -12,7 +26,7 @@ const PhonePage = () => {
 
   return (
     <Wrapper>
-      <div>
+      <div className="mb2">
         <button
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
@@ -27,12 +41,9 @@ const PhonePage = () => {
           Decrement
         </button>
       </div>
-      <Select>
-        <option value={16}>12</option>
-      </Select>
-      <Button color="#2873eb">Сохранить</Button>
+      <ContactForm list={list} />
     </Wrapper>
   );
 };
 
-export default PhonePage;
+export default initState(PhonePage);

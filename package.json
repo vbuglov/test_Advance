@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev node server",
-    "build.prod": "cross-env NODE_ENV=production next build"
+    "build.prod": "cross-env NODE_ENV=production next build",
+    "test": "cross-env NODE_ENV=test jest --config .jest.config.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
@@ -33,7 +34,17 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.5",
+    "react-style-proptype": "^3.2.2",
     "react-use-websocket": "^2.8.0",
     "styled-components": "^5.3.1"
+  },
+  "devDependencies": {
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+    "chai": "^4.3.4",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "jest": "^27.2.4",
+    "sinon": "^11.1.2"
   }
 }
