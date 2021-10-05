@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { updateList } from "@/store/slicers/contactFormSlicer";
 
 const request = async () => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve();
     }, 3000);
@@ -26,20 +26,17 @@ const request = async () => {
 };
 
 const useFetchData = () => {
-  const [data, setData] = useState(null);
-  const tes = useSelector((state) => state.contactForm);
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
-
-  console.log(tes);
-
   useEffect(() => {
-    const data = request().then(({ list }) => {
-      list && setData(list);
+    setLoading(true);
+    request().then(({ list }) => {
+      setLoading(false);
       list && dispatch(updateList(list));
     });
   }, []);
 
-  return { list: data, loading: !data };
+  return { loading };
 };
 
 export default useFetchData;

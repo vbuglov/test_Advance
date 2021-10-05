@@ -1,15 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { Wrapper } from "./styles";
 import { ContactForm } from "@/organisms/index";
 import { initState } from "./HOC";
 
 const PhonePage = () => {
-  const contactForm = useSelector((state) => state.contactForm);
+  const fields = ["email", "phone", "link"];
 
   return (
     <Wrapper>
-      <ContactForm list={contactForm.list} />
+      <ContactForm fields={fields} />
     </Wrapper>
   );
 };

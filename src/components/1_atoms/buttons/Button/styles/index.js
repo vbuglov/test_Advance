@@ -6,6 +6,8 @@ export const Btn = styled.button`
   padding: 7px 12px;
   cursor: pointer;
   border-radius: 4px;
+  ${({ disabled }) => disabled && "opacity: 0.5;"}
+  ${({ disabled }) => disabled && "cursor: not-allowed;"}
   &.primary {
     ${({ color }) => `background-color: ${color};`}
     ${({ color }) => `border: 1px solid ${lighten(0.1, color)};`}
