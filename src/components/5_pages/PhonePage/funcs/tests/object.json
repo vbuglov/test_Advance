@@ -1,0 +1,4 @@
+{
+  "type": ["email", "email", "phone"],
+  "value": ["test@test.com", "test2@test.com", "+78005004545"]
+}

@@ -14,3 +14,4 @@ const PhonePage = () => {
 };
 
 export default initState(PhonePage);
+export * from "./funcs";

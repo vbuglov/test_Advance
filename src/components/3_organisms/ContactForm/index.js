@@ -5,11 +5,15 @@ import { Wrapper } from "./styles";
 import T from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
 import { addEmptyItem } from "@/store/slicers/contactFormSlicer";
+import { getFormValues } from "@/pages/PhonePage";
 
 const ContactForm = ({ className, ...restProps }) => {
   const contactForm = useSelector((state) => state.contactForm);
   const dispatch = useDispatch();
   const list = contactForm.list;
+  const handleUpload = () => {
+    console.log(getFormValues(list));
+  };
 
   return (
     <Wrapper className={className}>
@@ -22,7 +26,9 @@ const ContactForm = ({ className, ...restProps }) => {
       >
         Добавить элемент
       </Button>
-      <Button color="green">Сохранить</Button>
+      <Button onClick={handleUpload} color="green">
+        Сохранить
+      </Button>
     </Wrapper>
   );
 };

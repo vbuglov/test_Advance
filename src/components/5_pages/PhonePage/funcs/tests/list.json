@@ -1,0 +1,14 @@
+[
+  {
+    "type": "email",
+    "value": "test@test.com"
+  },
+  {
+    "type": "email",
+    "value": "test2@test.com"
+  },
+  {
+    "type": "phone",
+    "value": "+78005004545"
+  }
+]

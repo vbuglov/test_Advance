@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateList } from "@/store/slicers/contactFormSlicer";
+import { convertArrayToObject } from "../funcs/index";
+import { pipe } from "ramda";
 
 const request = async () => {
   return new Promise((resolve) => {
@@ -8,20 +10,10 @@ const request = async () => {
       resolve();
     }, 3000);
   }).then(() => ({
-    list: [
-      {
-        type: "email",
-        value: "test@test.com",
-      },
-      {
-        type: "email",
-        value: "test@test.com",
-      },
-      {
-        type: "email",
-        value: "test@test.com",
-      },
-    ],
+    list: {
+      type: ["email", "email", "phone"],
+      value: ["test@test.com", "test2@test.com", "+78005004545"],
+    },
   }));
 };
 
@@ -32,7 +24,7 @@ const useFetchData = () => {
     setLoading(true);
     request().then(({ list }) => {
       setLoading(false);
-      list && dispatch(updateList(list));
+      pipe(convertArrayToObject, updateList, dispatch)(list);
     });
   }, []);
 
