@@ -25,7 +25,7 @@ console.log("hello");
     );
     server.listen(SERVER_PORT, (err) => {
       if (err) throw err;
-      console.log(`Server is running on http://172.25.78.64:${SERVER_PORT}`);
+      console.log(`Server is running on http://localhost:${SERVER_PORT}`);
     });
   } catch (error) {
     console.error(error);

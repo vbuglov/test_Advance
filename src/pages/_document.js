@@ -1,9 +1,11 @@
 import React from "react";
 import Document, { Head, Main, NextScript, Html } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 export default class DocumentPage extends Document {
   static async getInitialProps({ renderPage }) {
     try {
+      const styles = new ServerStyleSheet();
       const page = renderPage(
         (App) => (props) => styles.collectStyles(<App {...props} />)
       );

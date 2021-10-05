@@ -3,5 +3,5 @@
   "BUILD_VERSION": "v0.0.1",
   "DEFAULT_THEME": "main",
   "REQUESTS": "api",
-  "GRAPHQL_ENDPOINT": "http://172.25.78.167:4000/"
+  "GRAPHQL_ENDPOINT": "http://127.0.0.1:4000/"
 }

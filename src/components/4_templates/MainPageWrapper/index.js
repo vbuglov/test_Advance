@@ -1,12 +1,12 @@
 import React from "react";
+import LayoutWrapper from "../LayoutWrapper";
 
-const index = ({ children }) => {
+const MainPageWrapper = ({ children }) => {
   return (
     <div>
-      MainPageWrapper
-      {children}
+      <LayoutWrapper>{children}</LayoutWrapper>
     </div>
   );
 };
 
-export default index;
+export default MainPageWrapper;
