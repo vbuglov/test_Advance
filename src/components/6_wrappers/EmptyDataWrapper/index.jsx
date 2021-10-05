@@ -1,6 +1,6 @@
 import React from "react";
 import T from "prop-types";
-import PageStatusWrapper from "./PageStatusWrapper";
+import PageStatusWrapper from "../PageStatusWrapper";
 
 const EmptyDataWrapper = ({ isEmpty, children, ...props }) => {
   if (isEmpty) {

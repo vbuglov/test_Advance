@@ -6,8 +6,6 @@ const initState = (WrappedComponent) => {
   const ModifiedComponent = (ownProps) => {
     const { list, loading } = useFetchData();
 
-    console.log(list);
-
     const newProps = {
       list,
     };
